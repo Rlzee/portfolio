@@ -1,19 +1,19 @@
-import { Button } from "@/components/ui/button"
+import { DATA, BLUR_FADE_DELAY } from "@/data/resume"
+
+import { Hero } from "@/section/hero"
+import { About } from "@/section/about"
+import { Skills } from "@/section/skills"
 
 export default function Page() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
-    </div>
+    <main className="relative flex min-h-dvh flex-col gap-14">
+      <Hero
+        name={DATA.name}
+        description={DATA.description}
+        blurDelay={BLUR_FADE_DELAY}
+      />
+      <About blurDelay={BLUR_FADE_DELAY} summary={DATA.summary} />
+      <Skills blurDelay={BLUR_FADE_DELAY} skills={DATA.skills} />
+    </main>
   )
 }
