@@ -5,15 +5,13 @@ import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/components/theme-provider"
 import { FlickeringGrid } from "@/components/flickering-grid"
 
-const fontSans = Geist({
+const fontSans = Geist({ variable: "--font-sans", subsets: ["latin"] })
+const fontHeading = Geist({
+  variable: "--font-heading",
   subsets: ["latin"],
-  variable: "--font-sans",
+  weight: "600",
 })
-
-const fontMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-})
+const fontMono = Geist_Mono({ variable: "--font-mono", subsets: ["latin"] })
 
 export default function RootLayout({
   children,
@@ -26,8 +24,11 @@ export default function RootLayout({
         className={cn(
           "relative min-h-screen antialiased",
           fontSans.variable,
-          fontMono.variable
+          fontHeading.variable,
+          fontMono.variable,
+          "font-sans"
         )}
+        cz-shortcut-listen="true"
       >
         <ThemeProvider>
           {" "}
@@ -43,7 +44,7 @@ export default function RootLayout({
               }}
             />
           </div>
-          <div className="relative z-10 mx-auto max-w-2xl px-6 py-12 pb-24 sm:py-24">
+          <div className="relative isolate z-10 mx-auto max-w-2xl px-6 py-12 pb-24 sm:py-24">
             {children}
           </div>
         </ThemeProvider>
