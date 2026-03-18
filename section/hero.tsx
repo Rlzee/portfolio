@@ -10,8 +10,8 @@ type HeroProps = {
 
 export function Hero({ name, description, blurDelay }: HeroProps) {
   return (
-    <section id="hero">
-      <div className="mx-auto w-full max-w-2xl space-y-8">
+    <section id="hero" className="scroll-mt-34">
+      <div className="mx-auto w-full space-y-8">
         <div className="flex flex-col justify-between gap-2 gap-y-6 md:flex-row">
           <div className="order-2 flex flex-col gap-2 md:order-1">
             <BlurFadeText

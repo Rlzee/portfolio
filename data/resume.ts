@@ -7,8 +7,24 @@ import NodejsIcon from "@/components/icons/NodeJs"
 export const BLUR_FADE_DELAY = 0.2
 
 export const DATA = {
+  navbar: [
+    {
+      id: "hero",
+      label: "Home",
+    },
+    {
+      id: "projects",
+      label: "Projects",
+    },
+    {
+      id: "contact",
+      label: "Contact",
+    },
+  ],
   name: "Romain",
   email: "romainprovencel@icloud.com",
+  github: "https://github.com/Rlzee",
+  codesource: "https://github.com/Rlzee/portfolio",
   url: "",
   location: "",
   description: "Web Developer – Front-End Specialization, Full-Stack skills",

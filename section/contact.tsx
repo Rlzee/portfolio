@@ -44,7 +44,7 @@ function ContactSection({ email }: ContactSectionProps) {
         <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
           Get in Touch
         </h2>
-        <p className="mx-auto max-w-lg text-balance text-muted-foreground">
+        <p className="mx-auto max-w-lg text-muted-foreground sm:text-balance">
           Want to chat? Send me an email{" "}
           <Link
             href="mailto:romainprovencel@icloud.com"

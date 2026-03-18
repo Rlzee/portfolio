@@ -37,7 +37,11 @@ function ProjectsSection() {
             </p>
           </div>
         </div>
-        <div className="mx-auto grid max-w-[800px] auto-rows-fr grid-cols-1 gap-3 sm:grid-cols-2"></div>
+        <div className="sm:grid-cols- mx-auto grid max-w-[800px] auto-rows-fr grid-cols-1 gap-3 text-center">
+          <p className="animate-pulse py-24 text-9xl font-extrabold text-accent">
+            SOON
+          </p>
+        </div>
       </div>
     </section>
   )

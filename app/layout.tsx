@@ -1,9 +1,11 @@
 import { Geist, Geist_Mono } from "next/font/google"
-
 import "./globals.css"
+
+import { DATA } from "@/data/resume"
+
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/components/theme-provider"
-import { FlickeringGrid } from "@/components/flickering-grid"
+import { SiteHeader } from "@/components/site-header"
 
 const fontSans = Geist({ variable: "--font-sans", subsets: ["latin"] })
 const fontHeading = Geist({
@@ -31,21 +33,9 @@ export default function RootLayout({
         cz-shortcut-listen="true"
       >
         <ThemeProvider>
-          {" "}
-          <div className="absolute inset-0 top-0 right-0 left-0 z-0 h-[100px] overflow-hidden">
-            <FlickeringGrid
-              className="h-full w-full"
-              squareSize={2}
-              gridGap={2}
-              style={{
-                maskImage: "linear-gradient(to bottom, black, transparent)",
-                WebkitMaskImage:
-                  "linear-gradient(to bottom, black, transparent)",
-              }}
-            />
-          </div>
-          <div className="relative isolate z-10 mx-auto max-w-2xl px-6 py-12 pb-24 sm:py-24">
-            {children}
+          <div className="relative z-10 mx-auto max-w-4xl px-4">
+            <SiteHeader github={DATA.github} items={DATA.navbar} />
+            <main className="pt-4 pb-6">{children}</main>
           </div>
         </ThemeProvider>
       </body>
