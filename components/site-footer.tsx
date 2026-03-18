@@ -7,7 +7,7 @@ export function SiteFooter({ github, codesource }: FooterProps) {
   return (
     <div className="rounded-b-2xl px-4 py-6 lg:px-8">
       <div className="w-full px-1 text-center text-sm leading-loose text-muted-foreground">
-        Built by{" "}
+        © {new Date().getFullYear()} Built by{" "}
         <a
           href={github}
           target="_blank"

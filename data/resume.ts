@@ -25,7 +25,7 @@ export const DATA = {
   email: "romainprovencel@icloud.com",
   github: "https://github.com/Rlzee",
   codesource: "https://github.com/Rlzee/portfolio",
-  url: "",
+  url: "https://rlzee.vercel.app/",
   location: "",
   description: "Web Developer – Front-End Specialization, Full-Stack skills",
   summary:
