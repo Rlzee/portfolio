@@ -4,6 +4,7 @@ import { Hero } from "@/section/hero"
 import { About } from "@/section/about"
 import { Skills } from "@/section/skills"
 // import { Projects } from "@/section/projects"
+import { Contact } from "@/section/contact"
 
 export default function Page() {
   return (
@@ -16,6 +17,7 @@ export default function Page() {
       <About blurDelay={BLUR_FADE_DELAY} summary={DATA.summary} />
       <Skills blurDelay={BLUR_FADE_DELAY} skills={DATA.skills} />
       {/*<Projects blurDelay={BLUR_FADE_DELAY} />*/}
+      <Contact blurDelay={BLUR_FADE_DELAY} email={DATA.email} />
     </main>
   )
 }

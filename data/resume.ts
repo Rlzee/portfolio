@@ -8,6 +8,7 @@ export const BLUR_FADE_DELAY = 0.2
 
 export const DATA = {
   name: "Romain",
+  email: "romainprovencel@icloud.com",
   url: "",
   location: "",
   description: "Web Developer – Front-End Specialization, Full-Stack skills",

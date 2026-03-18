@@ -3,6 +3,7 @@
 import type React from "react"
 import BlurFade from "@/components/blur-fade"
 import { Badge } from "@/components/ui/badge"
+import { Micro_5_Charted } from "next/font/google"
 
 type SkillsProps = {
   blurDelay: number
@@ -16,12 +17,12 @@ export function Skills({ blurDelay, skills }: SkillsProps) {
   return (
     <section id="skills">
       <div className="flex min-h-0 flex-col gap-y-4">
-        <BlurFade delay={blurDelay * 9}>
+        <BlurFade delay={blurDelay * 4}>
           <h2 className="text-xl font-bold">Skills</h2>
         </BlurFade>
         <div className="flex flex-wrap gap-2">
           {skills.map((skill, id) => (
-            <BlurFade key={skill.name} delay={blurDelay * 10 + id * 0.05}>
+            <BlurFade key={skill.name} delay={blurDelay * 5 + id * 0.05}>
               <Badge variant="outline" size="lg" className="px-2 py-3">
                 {skill.icon && (
                   <skill.icon className="size-4 overflow-hidden object-contain" />

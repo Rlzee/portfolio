@@ -10,7 +10,7 @@ type ProjectProps = {
 export function Projects({ blurDelay }: ProjectProps) {
   return (
     <section id="projects">
-      <BlurFade delay={blurDelay * 11}>
+      <BlurFade delay={blurDelay * 6}>
         <ProjectsSection />
       </BlurFade>
     </section>
