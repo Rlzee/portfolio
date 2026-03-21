@@ -37,7 +37,7 @@ export function SiteHeader({ github, items }: SiteHeaderProps) {
       <Toolbar
         className={cn(
           "flex justify-between backdrop-blur-lg transition-all ease-in-out",
-          scrolled ? "rounded-none bg-background/60" : "bg-card/60"
+          scrolled ? "rounded-none border-y-0 bg-background/60" : "bg-card/60"
         )}
       >
         <ToolbarGroup>
