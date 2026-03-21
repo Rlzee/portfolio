@@ -14,7 +14,7 @@ export function SiteFooter({ github, codesource }: FooterProps) {
           rel="noreferrer"
           className="font-medium underline underline-offset-4"
         >
-          RLZ
+          R&apos;LZ
         </a>
         . The source code is available on{" "}
         <a

@@ -33,7 +33,7 @@ export default function Page() {
           />
           <About blurDelay={BLUR_FADE_DELAY} summary={DATA.summary} />
           <Skills blurDelay={BLUR_FADE_DELAY} skills={DATA.skills} />
-          <Projects blurDelay={BLUR_FADE_DELAY} />
+          <Projects blurDelay={BLUR_FADE_DELAY} projects={DATA.projects} />
           <Contact blurDelay={BLUR_FADE_DELAY} email={DATA.email} />
         </CardPanel>
       </Card>

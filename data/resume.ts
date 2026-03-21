@@ -52,4 +52,15 @@ export const DATA = {
       icon: NodejsIcon,
     },
   ],
+  projects: [
+    {
+      title: "SwiftSell",
+      dates: "Apr 4, 2025 - May 14, 2025",
+      href: "",
+      description: "",
+      tags: ["React", "Vite", "TypeScript", "Tailwind CSS"],
+      image: "",
+      video: "./swiftsell.mp4",
+    },
+  ],
 }
