@@ -43,7 +43,7 @@ function ProjectsSection({ blurDelay, projects }: Props) {
           {projects.map((project, id) => (
             <BlurFade
               key={project.title}
-              delay={blurDelay * 12 + id * 0.05}
+              delay={blurDelay * 6 + id * 0.05}
               className="h-full"
             >
               <ProjectCard
