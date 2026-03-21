@@ -12,7 +12,9 @@ import { ModeSwitcher } from "@/components/mode-switcher"
 
 import GithubIcon from "@/components/icons/Github"
 
+import { cn } from "@/lib/utils"
 import { scrollToSection } from "@/utils/scrollToSection"
+import { useScroll } from "@/hooks/use-scroll"
 
 type SiteHeaderProps = {
   github?: string
@@ -23,9 +25,21 @@ type SiteHeaderProps = {
 }
 
 export function SiteHeader({ github, items }: SiteHeaderProps) {
+  const scrolled = useScroll(0)
+
   return (
-    <div className="sticky top-0 z-20 pt-6">
-      <Toolbar className="flex justify-between bg-card/60 backdrop-blur-lg">
+    <div
+      className={cn(
+        "sticky top-0 z-20 py-4 transition-all ease-in-out",
+        scrolled && "py-0"
+      )}
+    >
+      <Toolbar
+        className={cn(
+          "flex justify-between backdrop-blur-lg transition-all ease-in-out",
+          scrolled ? "rounded-none bg-background/60" : "bg-card/60"
+        )}
+      >
         <ToolbarGroup>
           {items?.map((item) => (
             <ToolbarButton

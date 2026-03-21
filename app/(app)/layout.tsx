@@ -5,7 +5,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="relative z-10 mx-auto max-w-4xl px-4">
       <SiteHeader github={DATA.github} items={DATA.navbar} />
-      <main className="pt-4 pb-6">{children}</main>
+      <main className="pb-6">{children}</main>
     </div>
   )
 }

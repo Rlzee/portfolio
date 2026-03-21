@@ -1,3 +1,5 @@
+"use client"
+
 import { DATA, BLUR_FADE_DELAY } from "@/data/resume"
 
 import { CardFrame, Card, CardPanel } from "@/components/ui/card"
@@ -10,10 +12,20 @@ import { Projects } from "@/section/projects"
 import { Contact } from "@/section/contact"
 import { SiteFooter } from "@/components/site-footer"
 
+import { useScroll } from "@/hooks/use-scroll"
+import { cn } from "@/lib/utils"
+
 export default function Page() {
+  const scrolled = useScroll(0)
+
   return (
-    <CardFrame className="border-sidebar-border shadow-lg/5 dark:bg-background">
-      <Card className="dark:bg-background">
+    <CardFrame
+      className={cn(
+        "border-sidebar-border shadow-lg/5 dark:bg-background",
+        scrolled && "rounded-t-none"
+      )}
+    >
+      <Card className={cn("dark:bg-background", scrolled && "rounded-t-none")}>
         <div className="absolute inset-0 top-0 right-[-1.5] left-0 z-0 h-[100px] overflow-hidden">
           <FlickeringGrid
             className="h-full w-full"
