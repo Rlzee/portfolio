@@ -9,6 +9,8 @@ import {
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ModeSwitcher } from "@/components/mode-switcher"
+import { MobileNav } from "./mobile-nav"
+// import { SelectLanguage } from "./select-language"
 
 import GithubIcon from "@/components/icons/Github"
 
@@ -40,7 +42,7 @@ export function SiteHeader({ github, items }: SiteHeaderProps) {
           scrolled ? "rounded-none border-y-0 bg-background/60" : "bg-card/60"
         )}
       >
-        <ToolbarGroup>
+        <ToolbarGroup className="hidden sm:flex">
           {items?.map((item) => (
             <ToolbarButton
               key={item.id}
@@ -56,7 +58,12 @@ export function SiteHeader({ github, items }: SiteHeaderProps) {
             </ToolbarButton>
           ))}
         </ToolbarGroup>
+        <ToolbarGroup className="flex sm:hidden">
+          <MobileNav items={items} />
+        </ToolbarGroup>
         <ToolbarGroup>
+          {/*<SelectLanguage className="mr-2" />*/}
+          {/*<ToolbarSeparator />*/}
           <ToolbarButton render={<Button variant="ghost" size="icon-lg" />}>
             <Link href={github ?? "#"} target="_blank">
               <GithubIcon />

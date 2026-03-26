@@ -25,9 +25,9 @@ export function ModeSwitcher({
   return (
     <Button
       variant={variant}
-      size="icon"
-      className={cn("group/toggle extend-touch-target size-8", className)}
+      className={cn("group/toggle extend-touch-target", className)}
       onClick={toggleTheme}
+      size="icon-lg"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

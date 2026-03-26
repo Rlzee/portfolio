@@ -43,9 +43,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html suppressHydrationWarning>
       <body
-        className={`relative min-h-screen font-sans antialiased ${fontVariables}`}
+        className={`relative min-h-screen bg-sidebar font-sans antialiased ${fontVariables}`}
         cz-shortcut-listen="true"
       >
         <ThemeProvider>{children}</ThemeProvider>

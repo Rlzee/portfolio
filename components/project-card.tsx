@@ -3,12 +3,13 @@
 import { useState } from "react"
 
 import {
-  Frame,
-  FrameDescription,
-  FrameFooter,
-  FramePanel,
-  FrameTitle,
-} from "@/components/ui/frame"
+  Card,
+  CardFrame,
+  CardDescription,
+  CardFrameFooter,
+  CardPanel,
+  CardTitle,
+} from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import Markdown from "react-markdown"
@@ -52,34 +53,36 @@ export function ProjectCard({
   video,
 }: ProjectCardProps) {
   return (
-    <Frame className="w-full">
-      <FramePanel className="p-0">
-        <Link
-          href={href || "#"}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block"
-        >
-          {video ? (
-            <video
-              src={video}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="h-48 w-full rounded-xl border object-cover"
-            />
-          ) : image ? (
-            <ProjectImage src={image} alt={title} />
-          ) : (
-            <div className="h-48 w-full rounded-xl border bg-muted object-cover" />
-          )}
-        </Link>
-      </FramePanel>
-      <FrameFooter className="flex flex-col gap-3">
+    <CardFrame className="w-full after:pointer-events-none after:absolute after:-inset-[5px] after:-z-1 after:rounded-[calc(var(--radius-xl)+4px)] after:border after:border-border/64 dark:bg-background">
+      <Card className="flex-1 flex-col flex-wrap overflow-x-auto dark:bg-background">
+        <CardPanel className="p-0">
+          <Link
+            href={href || "#"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
+            {video ? (
+              <video
+                src={video}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="h-48 w-full rounded-xl border object-cover"
+              />
+            ) : image ? (
+              <ProjectImage src={image} alt={title} />
+            ) : (
+              <div className="h-48 w-full rounded-xl border bg-muted object-cover" />
+            )}
+          </Link>
+        </CardPanel>
+      </Card>
+      <CardFrameFooter className="flex flex-col gap-3 px-3">
         <div>
-          <FrameTitle>{title}</FrameTitle>
-          <FrameDescription>{dates}</FrameDescription>
+          <CardTitle>{title}</CardTitle>
+          <CardDescription>{dates}</CardDescription>
         </div>
         {description && (
           <div className="prose dark:prose-invert max-w-full flex-1 font-sans text-sm leading-relaxed text-pretty text-muted-foreground">
@@ -95,7 +98,7 @@ export function ProjectCard({
             ))}
           </div>
         )}
-      </FrameFooter>
-    </Frame>
+      </CardFrameFooter>
+    </CardFrame>
   )
 }
