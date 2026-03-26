@@ -1,5 +1,7 @@
 "use client"
 
+import { useTranslations } from "next-intl"
+
 import {
   Toolbar,
   ToolbarGroup,
@@ -10,7 +12,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ModeSwitcher } from "@/components/mode-switcher"
 import { MobileNav } from "./mobile-nav"
-// import { SelectLanguage } from "./select-language"
+import { LocaleSwitcher } from "./locale-switcher"
 
 import GithubIcon from "@/components/icons/Github"
 
@@ -27,6 +29,8 @@ type SiteHeaderProps = {
 }
 
 export function SiteHeader({ github, items }: SiteHeaderProps) {
+  const t = useTranslations("DATA")
+
   const scrolled = useScroll(0)
 
   return (
@@ -54,7 +58,7 @@ export function SiteHeader({ github, items }: SiteHeaderProps) {
                 />
               }
             >
-              {item.label}
+              {t(`navbar.${item.label}`)}
             </ToolbarButton>
           ))}
         </ToolbarGroup>
@@ -62,8 +66,8 @@ export function SiteHeader({ github, items }: SiteHeaderProps) {
           <MobileNav items={items} />
         </ToolbarGroup>
         <ToolbarGroup>
-          {/*<SelectLanguage className="mr-2" />*/}
-          {/*<ToolbarSeparator />*/}
+          <LocaleSwitcher className="mr-2" />
+          <ToolbarSeparator />
           <ToolbarButton render={<Button variant="ghost" size="icon-lg" />}>
             <Link href={github ?? "#"} target="_blank">
               <GithubIcon />

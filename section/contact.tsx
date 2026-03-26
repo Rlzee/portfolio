@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import BlurFade from "@/components/blur-fade"
@@ -24,10 +25,12 @@ type ContactSectionProps = {
 }
 
 function ContactSection({ email }: ContactSectionProps) {
+  const t = useTranslations("section.contact")
+
   return (
     <Card className="p-10">
       <div className="absolute -top-4 left-1/2 z-10 -translate-x-1/2 px-4 py-1">
-        <Badge size="lg">Contact</Badge>
+        <Badge size="lg">{t("badge-title")}</Badge>
       </div>
       <div className="absolute inset-0 top-0 right-0 left-0 h-1/2 overflow-hidden rounded-2xl">
         <FlickeringGrid
@@ -42,17 +45,17 @@ function ContactSection({ email }: ContactSectionProps) {
       </div>
       <div className="relative flex flex-col items-center gap-4 text-center">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-          Get in Touch
+          {t("title")}
         </h2>
         <p className="mx-auto max-w-lg text-muted-foreground sm:text-balance">
-          Want to chat? Send me an email{" "}
+          {t("message")}{" "}
           <Link
             href="mailto:romainprovencel@icloud.com"
             className="rounded-sm text-foreground underline-offset-4 hover:underline focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none"
           >
             {email}
           </Link>{" "}
-          and I&apos;ll respond whenever I can. I will ignore all soliciting.
+          {t("message-end")}
         </p>
       </div>
     </Card>

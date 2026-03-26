@@ -1,5 +1,7 @@
 "use client"
 
+import { useTranslations } from "next-intl"
+
 import { useState } from "react"
 import { scrollToSection } from "@/utils/scrollToSection"
 
@@ -27,6 +29,7 @@ type Props = {
 
 export function MobileNav({ items }: Props) {
   const [open, setOpen] = useState(false)
+  const t = useTranslations("DATA")
 
   const toggle = () => setOpen(!open)
 
@@ -60,7 +63,7 @@ export function MobileNav({ items }: Props) {
                     <DrawerMenuItem onClick={() => scrollToSection(item.id)} />
                   }
                 >
-                  {item.label}
+                  {t(`navbar.${item.label}`)}
                 </DrawerClose>
               ))}
             </DrawerMenuGroup>

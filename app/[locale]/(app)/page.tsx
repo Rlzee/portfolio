@@ -1,6 +1,7 @@
 "use client"
 
 import { DATA, BLUR_FADE_DELAY } from "@/data/resume"
+import { useTranslations } from "next-intl"
 
 import { CardFrame, Card, CardPanel } from "@/components/ui/card"
 import { FlickeringGrid } from "@/components/flickering-grid"
@@ -16,6 +17,8 @@ import { useScroll } from "@/hooks/use-scroll"
 import { cn } from "@/lib/utils"
 
 export default function Page() {
+  const t = useTranslations("DATA")
+
   const scrolled = useScroll(0)
 
   return (
@@ -40,10 +43,10 @@ export default function Page() {
         <CardPanel className="flex flex-col gap-8 py-8 sm:gap-14 sm:px-12 sm:py-12">
           <Hero
             name={DATA.name}
-            description={DATA.description}
+            description={t("description")}
             blurDelay={BLUR_FADE_DELAY}
           />
-          <About blurDelay={BLUR_FADE_DELAY} summary={DATA.summary} />
+          <About blurDelay={BLUR_FADE_DELAY} summary={t("summary")} />
           <Skills blurDelay={BLUR_FADE_DELAY} skills={DATA.skills} />
           <Projects blurDelay={BLUR_FADE_DELAY} projects={DATA.projects} />
           <Contact blurDelay={BLUR_FADE_DELAY} email={DATA.email} />

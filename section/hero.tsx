@@ -1,5 +1,7 @@
 "use client"
 
+import { useTranslations } from "next-intl"
+
 import BlurFadeText from "@/components/blur-fade-text"
 
 type HeroProps = {
@@ -9,6 +11,8 @@ type HeroProps = {
 }
 
 export function Hero({ name, description, blurDelay }: HeroProps) {
+  const t = useTranslations("section.hero")
+
   return (
     <section id="hero" className="scroll-mt-34">
       <div className="mx-auto w-full space-y-8">
@@ -18,10 +22,10 @@ export function Hero({ name, description, blurDelay }: HeroProps) {
               delay={blurDelay}
               className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
               yOffset={8}
-              text={`Hi, I'm ${name.split(" ")[0]}`}
+              text={`${t("title")} ${name.split(" ")[0]}`}
             />
             <BlurFadeText
-              className="max-w-[600px] text-muted-foreground md:text-lg lg:text-xl"
+              className="max-w-[600px] text-muted-foreground tracking-tighter md:text-lg lg:text-xl"
               delay={blurDelay}
               text={description}
             />

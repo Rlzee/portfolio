@@ -1,5 +1,7 @@
 "use client"
 
+import { useTranslations } from "next-intl"
+
 import BlurFade from "@/components/blur-fade"
 import { Badge } from "@/components/ui/badge"
 import { ProjectCard, type ProjectCardProps } from "@/components/project-card"
@@ -20,22 +22,23 @@ export function Projects({ blurDelay, projects }: Props) {
 }
 
 function ProjectsSection({ blurDelay, projects }: Props) {
+  const t = useTranslations("section.projects")
+
   return (
     <section id="projects">
       <div className="flex min-h-0 flex-col gap-y-8">
         <div className="flex flex-col items-center justify-center gap-y-4">
           <div className="flex w-full items-center">
             <div className="h-px flex-1 bg-linear-to-r from-transparent from-5% via-border via-95% to-transparent" />
-            <Badge size="lg">My Projects</Badge>
+            <Badge size="lg">{t("badge-title")}</Badge>
             <div className="h-px flex-1 bg-linear-to-l from-transparent from-5% via-border via-95% to-transparent" />
           </div>
           <div className="flex flex-col items-center justify-center gap-y-3">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-              Check out my work
+              {t("title")}
             </h2>
             <p className="text-center text-balance text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed">
-              I&apos;ve worked on a variety of projects, from simple websites to
-              complex web applications. Here are a few.
+              {t("description")}
             </p>
           </div>
         </div>

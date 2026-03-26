@@ -1,0 +1,39 @@
+{
+  "section": {
+    "hero": {
+      "title": "Bonjour, je suis"
+    },
+    "about": {
+      "title": "À propos"
+    },
+    "skills": {
+      "title": "Compétences"
+    },
+    "projects": {
+      "badge-title": "Mes Projets",
+      "title": "Voir mes projets",
+      "description": "J'ai travaillé sur une variété de projets, allant des sites web simples aux applications web complexes. Voici quelques-uns."
+    },
+    "contact": {
+      "badge-title": "contact",
+      "title": "Contactez-moi",
+      "message": "Voulez-vous discuter? Envoyez-moi un email",
+      "message-end": "et je répondrai dès que possible. Je ne répondrai pas à toutes les demandes."
+    }
+  },
+  "footer": {
+    "1": "Construit par",
+    "name": "R'LZ",
+    "2": ". Le code source est disponible sur",
+    "github": "GitHub"
+  },
+  "DATA": {
+    "navbar": {
+      "Home": "Accueil",
+      "Projects": "Projets",
+      "Contact": "Contact"
+    },
+    "description": "Développeur Web – Spécialisation Front-End, compétences Full-Stack",
+    "summary": "J'ai commencé ma carrière de développeur en créant des scripts et des interfaces pour des serveurs FiveM, où j'ai passé plus de 3 ans à perfectionner mes compétences en UI, logique et résolution de problèmes. Cette expérience m'a passionné pour le codage et a naturellement conduit à un monde de développement web. Aujourd'hui, je suis passionné par le développement front-end, avec une particularité pour créer des pages d'accueil modernes et performantes. J'aime transformer des idées en interfaces claires et attrayantes en utilisant des technologies telles que React. Mon objectif : créer des pages web qui attirent l'attention, convertissent et offrent une expérience utilisateur excellente. Je suis toujours curieux d'apprendre de nouvelles choses et de me perfectionner. N'hésitez pas à me contacter si vous êtes intéressé par une collaboration!"
+  }
+}
