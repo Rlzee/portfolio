@@ -1,0 +1,39 @@
+{
+  "section": {
+    "hero": {
+      "title": "Hi, I'm"
+    },
+    "about": {
+      "title": "About"
+    },
+    "skills": {
+      "title": "skills"
+    },
+    "projects": {
+      "badge-title": "My Projects",
+      "title": " Check out my work",
+      "description": "I've worked on a variety of projects, from simple websites to complex web applications. Here are a few."
+    },
+    "contact": {
+      "badge-title": "contact",
+      "title": "Get in Touch",
+      "message": "Want to chat? Send me an email",
+      "message-end": "and I'll respond whenever I can. I will ignore all soliciting."
+    }
+  },
+  "footer": {
+    "1": "Built by",
+    "name": "R'LZ",
+    "2": ". The source code is available on",
+    "github": "GitHub"
+  },
+  "DATA": {
+    "navbar": {
+      "Home": "Home",
+      "Projects": "Projects",
+      "Contact": "Contact"
+    },
+    "description": "Web Developer – Front-End Specialization, Full-Stack skills",
+    "summary": "I started my development journey creating scripts and interfaces for FiveM servers, where I spent over 3 years honing my skills in UI, logic, and problem-solving. This experience sparked my passion for coding and naturally led me to the world of web development. Today, I'm passionate about front-end development, with a particular interest in creating modern and high-performing landing pages. I enjoy transforming ideas into clear and attractive interfaces using technologies like React. My goal: to create web pages that capture attention, convert, and provide a great user experience. I'm always eager to learn new things and improve my skills. Don't hesitate to contact me if you're interested in collaborating!"
+  }
+}
