@@ -3,6 +3,7 @@ import TypescriptIcon from "@/components/icons/Typescript"
 import TailwindCssIcon from "@/components/icons/TailwindCss"
 import ReactIcon from "@/components/icons/React"
 import NodejsIcon from "@/components/icons/NodeJs"
+import LuaIcon from "@/components/icons/Lua"
 
 export const BLUR_FADE_DELAY = 0.2
 
@@ -50,6 +51,10 @@ export const DATA = {
     {
       name: "Node.js",
       icon: NodejsIcon,
+    },
+    {
+      name: "Lua",
+      icon: LuaIcon,
     },
   ],
   projects: [

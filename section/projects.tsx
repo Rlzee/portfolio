@@ -26,7 +26,7 @@ function ProjectsSection({ blurDelay, projects }: Props) {
 
   return (
     <section id="projects">
-      <div className="flex min-h-0 flex-col gap-y-8 max-sm:py-4">
+      <div className="flex min-h-0 flex-col gap-y-8 max-sm:pt-2 max-sm:pb-4">
         <div className="flex flex-col items-center justify-center gap-y-4">
           <div className="flex w-full items-center">
             <div className="h-px flex-1 bg-linear-to-r from-transparent from-5% via-border via-95% to-transparent" />

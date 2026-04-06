@@ -3,6 +3,8 @@
 import { useTranslations } from "next-intl"
 
 import BlurFadeText from "@/components/blur-fade-text"
+import BlurFade from "@/components/blur-fade"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 type HeroProps = {
   name: string
@@ -25,11 +27,17 @@ export function Hero({ name, description, blurDelay }: HeroProps) {
               text={`${t("title")} ${name.split(" ")[0]}`}
             />
             <BlurFadeText
-              className="max-w-[600px] text-muted-foreground tracking-tighter md:text-lg lg:text-xl"
+              className="max-w-[600px] tracking-tighter text-muted-foreground md:text-lg lg:text-xl"
               delay={blurDelay}
               text={description}
             />
           </div>
+          <BlurFade delay={blurDelay} className="order-1 md:order-2">
+            <Avatar className="size-24 border md:size-32">
+              <AvatarImage src="/bitmoji.png" alt="Avatar" />
+              <AvatarFallback>AB</AvatarFallback>
+            </Avatar>
+          </BlurFade>
         </div>
       </div>
     </section>

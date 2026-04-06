@@ -15,7 +15,7 @@ export function About({ blurDelay, summary }: AboutProps) {
 
   return (
     <section id="about">
-      <div className="flex min-h-0 flex-col gap-y-4">
+      <div className="flex min-h-0 flex-col gap-y-4 md:-mt-9">
         <BlurFade delay={blurDelay * 2}>
           <h2 className="text-xl font-bold">{t("title")}</h2>
         </BlurFade>

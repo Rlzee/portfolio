@@ -12,7 +12,7 @@ type ContactProps = {
 
 export function Contact({ blurDelay, email }: ContactProps) {
   return (
-    <section id="contact">
+    <section id="contact" className="pt-2">
       <BlurFade delay={blurDelay * 7}>
         <ContactSection email={email} />
       </BlurFade>
