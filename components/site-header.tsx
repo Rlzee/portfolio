@@ -88,7 +88,7 @@ export function SiteHeader({ github, items }: SiteHeaderProps) {
           </ToolbarGroup>
 
           <ToolbarGroup>
-            <LocaleSwitcher />
+            <LocaleSwitcher className="mr-2" />
             <ToolbarSeparator />
             <ToolbarButton render={<Button variant="ghost" size="icon-lg" />}>
               <Link href={github ?? "#"} target="_blank">

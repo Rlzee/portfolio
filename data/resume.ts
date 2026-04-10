@@ -4,6 +4,7 @@ import TailwindCssIcon from "@/components/icons/TailwindCss"
 import ReactIcon from "@/components/icons/React"
 import NodejsIcon from "@/components/icons/NodeJs"
 import LuaIcon from "@/components/icons/Lua"
+import MySqlIcon from "@/components/icons/MySql"
 
 export const BLUR_FADE_DELAY = 0.2
 
@@ -55,6 +56,10 @@ export const DATA = {
     {
       name: "Lua",
       icon: LuaIcon,
+    },
+    {
+      name: "MySQL",
+      icon: MySqlIcon,
     },
   ],
   projects: [
