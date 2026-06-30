@@ -11,6 +11,8 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Globe } from "lucide-react"
+import GithubIcon from "./icons/Github"
 import Link from "next/link"
 import Markdown from "react-markdown"
 
@@ -36,6 +38,7 @@ function ProjectImage({ src, alt }: { src: string; alt: string }) {
 export interface ProjectCardProps {
   title: string
   href?: string
+  github?: string
   description: string
   dates: string
   tags: readonly string[]
@@ -46,6 +49,7 @@ export interface ProjectCardProps {
 export function ProjectCard({
   title,
   href,
+  github,
   description,
   dates,
   tags,
@@ -56,27 +60,38 @@ export function ProjectCard({
     <CardFrame className="w-full after:pointer-events-none after:absolute after:-inset-[5px] after:-z-1 after:rounded-[calc(var(--radius-xl)+4px)] after:border after:border-border/64 dark:bg-background">
       <Card className="flex-1 flex-col flex-wrap overflow-x-auto dark:bg-background">
         <CardPanel className="p-0">
-          <Link
-            href={href || "#"}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block"
-          >
-            {video ? (
-              <video
-                src={video}
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="h-48 w-full rounded-xl border object-cover"
-              />
-            ) : image ? (
-              <ProjectImage src={image} alt={title} />
-            ) : (
-              <div className="h-48 w-full rounded-xl border bg-muted object-cover" />
+          <div className="absolute top-2 right-2 flex flex-wrap gap-2">
+            {href && (
+              <Link href={href} target="_blank" rel="noopener noreferrer">
+                <Badge className="cursor-pointer border border-border bg-background px-2 py-1 text-foreground dark:border-none">
+                  <Globe />
+                  website
+                </Badge>
+              </Link>
             )}
-          </Link>
+            {github && (
+              <Link href={github} target="_blank" rel="noopener noreferrer">
+                <Badge className="cursor-pointer border border-border bg-background px-2 py-1 text-foreground dark:border-none">
+                  <GithubIcon />
+                  source
+                </Badge>
+              </Link>
+            )}
+          </div>
+          {video ? (
+            <video
+              src={video}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="h-48 w-full rounded-xl border object-cover"
+            />
+          ) : image ? (
+            <ProjectImage src={image} alt={title} />
+          ) : (
+            <div className="h-48 w-full rounded-xl border bg-muted object-cover" />
+          )}
         </CardPanel>
       </Card>
       <CardFrameFooter className="flex flex-col gap-3 px-3">

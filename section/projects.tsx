@@ -42,7 +42,7 @@ function ProjectsSection({ blurDelay, projects }: Props) {
             </p>
           </div>
         </div>
-        <div className="sm:grid-cols-auto mx-auto grid max-w-[800px] auto-rows-fr grid-cols-1 gap-3">
+        <div className="sm:grid-cols-auto mx-auto grid max-w-[800px] grid-cols-1 gap-8">
           {projects.map((project, id) => (
             <BlurFade
               key={project.title}
@@ -58,6 +58,7 @@ function ProjectsSection({ blurDelay, projects }: Props) {
                 tags={project.tags}
                 image={project.image}
                 video={project.video}
+                github={project.github}
               />
             </BlurFade>
           ))}

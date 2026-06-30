@@ -67,10 +67,22 @@ export const DATA = {
       title: "SwiftSell",
       dates: "Apr 4, 2025 - May 14, 2025",
       href: "",
+      github: "",
       description: "",
       tags: ["React", "Vite", "TypeScript", "Tailwind CSS"],
       image: "",
       video: "./swiftsell.mp4",
+    },
+    {
+      title: "Next Vite Router",
+      dates: "Nov 21, 2025 - Mar 6, 2026",
+      href: "",
+      github: "https://github.com/Rlzee/next-vite-router",
+      description:
+        "Next Vite Router is an npm package that provides Next.js-style, file-based routing for React applications built with Vite. It generates React Router route objects from a filesystem layout (pages, layouts, not-found), and it exposes a Vite plugin that injects a virtual module to generate routes at build/dev time.",
+      tags: ["TypeScript", "Vite", "React"],
+      image: "",
+      video: "",
     },
   ],
 }
